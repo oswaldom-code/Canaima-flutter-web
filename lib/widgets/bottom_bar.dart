@@ -1,3 +1,5 @@
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:nature_landing_page/constants/strings.dart';
 import 'package:nature_landing_page/widgets/bottom_bar_column.dart';
 import 'package:nature_landing_page/widgets/info_text.dart';
 import 'package:nature_landing_page/widgets/responsive.dart';
@@ -11,6 +13,7 @@ class BottomBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      //decoration: BoxDecoration(),
       padding: EdgeInsets.all(30),
       color: Theme.of(context).bottomAppBarColor,
       child: ResponsiveWidget.isSmallScreen(context)
@@ -22,22 +25,22 @@ class BottomBar extends StatelessWidget {
                   //falta asignar las URL y _isHovering
                   children: [
                     BottomBarColumn(
-                      heading: 'ABOUT',
-                      s1: 'Contact Us',
-                      s2: 'About Us',
-                      s3: 'Careers',
+                      heading: strAbout,
+                      s1: strContactUs,
+                      s2: strAboutUs,
+                      s3: strAboutUs,
                     ),
                     BottomBarColumn(
-                      heading: 'HELP',
-                      s1: 'Payment',
-                      s2: 'Cancellation',
-                      s3: 'FAQ',
+                      heading: strHelp,
+                      s1: strPayment,
+                      s2: strReservation,
+                      s3: strFAQ,
                     ),
                     BottomBarColumn(
-                      heading: 'SOCIAL',
-                      s1: 'Twitter',
-                      s2: 'Facebook',
-                      s3: 'YouTube',
+                      heading: strDocument,
+                      s1: strDocument1,
+                      s2: strDocument2,
+                      s3: strDocument3,
                     ),
                   ],
                 ),
@@ -47,14 +50,48 @@ class BottomBar extends StatelessWidget {
                   height: 1,
                 ),
                 SizedBox(height: 20),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    InfoText(
+                      type: 'REDES SOCIALES',
+                      text: '',
+                    ),
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        IconButton(
+                          icon: const Icon(Icons.add_alert),
+                          tooltip: strChanel1,
+                          onPressed: () {},
+                        ),
+                        IconButton(
+                          icon: const Icon(Icons.add_alert),
+                          tooltip: strChanel2,
+                          onPressed: () {},
+                        ),
+                        IconButton(
+                          icon: const Icon(Icons.add_alert),
+                          tooltip: strChanel3,
+                          onPressed: () {},
+                        ),
+                      ],
+                    )
+                  ],
+                ),
                 InfoText(
-                  type: 'Email',
-                  text: 'explore@gmail.com',
+                  type: 'Correo',
+                  text: strEmail,
                 ),
                 SizedBox(height: 5),
                 InfoText(
-                  type: 'Address',
-                  text: '128, Trymore Road, Delft, MN - 56124',
+                  type: 'Dirección',
+                  text: strAddress1,
+                ),
+                InfoText(
+                  type: '',
+                  text: strAddress2,
                 ),
                 SizedBox(height: 20),
                 Container(
@@ -64,7 +101,7 @@ class BottomBar extends StatelessWidget {
                 ),
                 SizedBox(height: 20),
                 Text(
-                  'Copyright © 2020 | EXPLORE',
+                  'Copyright © 2021 | CANAIMA',
                   style: TextStyle(
                     color: Colors.blueGrey[300],
                     fontSize: 14,
@@ -79,22 +116,22 @@ class BottomBar extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     BottomBarColumn(
-                      heading: 'ABOUT',
-                      s1: 'Contact Us',
-                      s2: 'About Us',
-                      s3: 'Careers',
+                      heading: strAbout,
+                      s1: strContactUs,
+                      s2: strAboutUs,
+                      s3: strAboutUs,
                     ),
                     BottomBarColumn(
-                      heading: 'HELP',
-                      s1: 'Payment',
-                      s2: 'Cancellation',
-                      s3: 'FAQ',
+                      heading: strHelp,
+                      s1: strPayment,
+                      s2: strReservation,
+                      s3: strFAQ,
                     ),
                     BottomBarColumn(
-                      heading: 'SOCIAL',
-                      s1: 'Twitter',
-                      s2: 'Facebook',
-                      s3: 'YouTube',
+                      heading: strDocument,
+                      s1: strDocument1,
+                      s2: strDocument2,
+                      s3: strDocument3,
                     ),
                     Container(
                       color: Colors.blueGrey,
@@ -102,19 +139,66 @@ class BottomBar extends StatelessWidget {
                       height: 150,
                     ),
                     Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Row(
+                          children: <Widget>[
+                            Center(
+                              child: Column(
+                                mainAxisSize: MainAxisSize.max,
+                                //crossAxisAlignment: CrossAxisAlignment.end,
+                                children: [
+                                  InfoText(
+                                    type: 'REDES SOCIALES',
+                                    text: '',
+                                  ),
+                                  Row(
+                                    children: <Widget>[
+                                      IconButton(
+                                        icon: const Icon(
+                                            FontAwesomeIcons.twitterSquare),
+                                        tooltip: strChanel1,
+                                        onPressed: () {},
+                                      ),
+                                      IconButton(
+                                        icon: const Icon(
+                                            FontAwesomeIcons.facebookSquare),
+                                        tooltip: strChanel2,
+                                        onPressed: () {},
+                                      ),
+                                      IconButton(
+                                        icon: const Icon(
+                                            FontAwesomeIcons.instagramSquare),
+                                        tooltip: strChanel3,
+                                        onPressed: () {},
+                                      ),
+                                    ],
+                                  )
+                                ],
+                              ),
+                            )
+                          ],
+                        ),
+                      ],
+                    ),
+                    Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         InfoText(
-                          type: 'Email',
-                          text: 'explore@gmail.com',
+                          type: 'Correo',
+                          text: strEmail,
                         ),
                         SizedBox(height: 5),
                         InfoText(
-                          type: 'Address',
-                          text: '128, Trymore Road, Delft, MN - 56124',
-                        )
+                          type: 'Dirección',
+                          text: strAddress1,
+                        ),
+                        InfoText(
+                          type: '',
+                          text: strAddress2,
+                        ),
                       ],
-                    ),
+                    )
                   ],
                 ),
                 Padding(
@@ -126,11 +210,13 @@ class BottomBar extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 20),
-                Text(
-                  'Copyright © 2020 | EXPLORE',
-                  style: TextStyle(
-                    color: Colors.blueGrey[300],
-                    fontSize: 14,
+                Container(
+                  child: Text(
+                    'Copyright © 2021 | CANAIMA',
+                    style: TextStyle(
+                      color: Colors.blueGrey[300],
+                      fontSize: 14,
+                    ),
                   ),
                 ),
               ],

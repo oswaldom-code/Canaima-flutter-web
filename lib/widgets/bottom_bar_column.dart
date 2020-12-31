@@ -43,12 +43,6 @@ class _BottomBarColumnState extends State<BottomBarColumn> {
             height: 10,
           ),
           InkWell(
-            onHover: (value) {
-              setState(() {
-                //_isHovering[0] = _setStateHelper(_isHovering);
-                //_isHovering[0] = _isHovering[0] ? false : true;
-              });
-            },
             onTap: () {},
             child: Text(
               widget.s1,
@@ -59,19 +53,25 @@ class _BottomBarColumnState extends State<BottomBarColumn> {
             ),
           ),
           SizedBox(height: 5),
-          Text(
-            widget.s2,
-            style: TextStyle(
-              color: Colors.blueGrey[100],
-              fontSize: 14,
+          InkWell(
+            onTap: () {},
+            child: Text(
+              widget.s2,
+              style: TextStyle(
+                color: Colors.blueGrey[100],
+                fontSize: 14,
+              ),
             ),
           ),
           SizedBox(height: 5),
-          Text(
-            widget.s3,
-            style: TextStyle(
-              color: Colors.blueGrey[100],
-              fontSize: 14,
+          InkWell(
+            onTap: () {},
+            child: Text(
+              widget.s3,
+              style: TextStyle(
+                color: Colors.blueGrey[100],
+                fontSize: 14,
+              ),
             ),
           ),
         ],

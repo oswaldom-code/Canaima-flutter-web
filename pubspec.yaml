@@ -18,6 +18,9 @@ dependencies:
   firebase_auth: ^0.18.0+1
   google_sign_in: ^4.5.3
   firebase_core: ^0.5.0
+  carousel_slider: ^2.2.1
+
+  font_awesome_flutter: ^8.11.0
 
   cupertino_icons: ^1.0.1
 
@@ -42,3 +45,4 @@ flutter:
   assets:
     - assets/images/cover.jpg
     - assets/images/google_logo.png
+    - assets/images/backgroundFooter.jpg

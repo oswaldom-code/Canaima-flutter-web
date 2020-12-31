@@ -14,7 +14,7 @@ class InfoText extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          '$type: ',
+          '$type',
           style: TextStyle(
             color: Colors.blueGrey[300],
             fontSize: 16,

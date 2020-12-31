@@ -2,6 +2,7 @@ import 'package:dynamic_theme/dynamic_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:nature_landing_page/constants/strings.dart';
 import 'package:nature_landing_page/widgets/bottom_bar.dart';
+//import 'package:nature_landing_page/widgets/carousel.dart';
 
 import '../widgets/auth_dialog.dart';
 import '../widgets/tools/authentication.dart';
@@ -258,6 +259,7 @@ class _HomeScreenState extends State<HomePage> {
                       ),
                 ),
               ),
+              //DestinationCarousel(),
             ],
           ),
           BottomBar(),
