@@ -62,17 +62,17 @@ class BottomBar extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         IconButton(
-                          icon: const Icon(Icons.add_alert),
+                          icon: const Icon(FontAwesomeIcons.twitterSquare),
                           tooltip: strChanel1,
                           onPressed: () {},
                         ),
                         IconButton(
-                          icon: const Icon(Icons.add_alert),
+                          icon: const Icon(FontAwesomeIcons.facebookSquare),
                           tooltip: strChanel2,
                           onPressed: () {},
                         ),
                         IconButton(
-                          icon: const Icon(Icons.add_alert),
+                          icon: const Icon(FontAwesomeIcons.instagramSquare),
                           tooltip: strChanel3,
                           onPressed: () {},
                         ),
